@@ -2,49 +2,43 @@
 // and is accessible using double brackets:
 // e.g. {{ recordTitle }}
 {
-    "Title": "UAT Evaluation",
-    "questions": [
-      {
-        "name": "QUEST-0001",
-        "question__c": "1. I didn't experience issues in my database related to the performance of software, hardware or network.",
-        "help_text__c": "This question relates to the main database as well as the CMS connector.",
-        "options": "AgreeValues",
-        "comment_available__c": "Yes"
-      },
-      {
-        "name": "QUEST-0001",
-        "question__c": "2. The combination of the UPK \"Try It\" mode and the business processes will be sufficient documentation for me to perform my day to day activities after the upgrade is complete",
-        "help_text__c": "This question relates to the main database as well as the CMS connector.",
-        "options": "AgreeValues",
-        "comment_available__c": "Yes"
-      },
-      {
-        "name": "QUEST-0001",
-        "question__c": "3. The tests conducted during UAT and in homework were representative of the major business processes my institution will perform on a recurring basis.",
-        "help_text__c": "This question relates to the main database as well as the CMS connector.",
-        "options": "AgreeValues",
-        "comment_available__c": "Yes"
-      },
-      {
-        "name": "QUEST-0001",
-        "question__c": "4. I didn't experience issues in my database related to the performance of software, hardware or network.",
-        "help_text__c": "This question relates to the main database as well as the CMS connector.",
-        "options": "AgreeValues",
-        "comment_available__c": "Yes"
-      },
-      {
-        "name": "QUEST-0001",
-        "question__c": "5. I didn't experience issues in my database related to the performance of software, hardware or network.",
-        "help_text__c": "This question relates to the main database as well as the CMS connector.",
-        "options": "AgreeValues",
-        "comment_available__c": "Yes"
-      },
-      {
-        "name": "QUEST-0001",
-        "question__c": "6. I didn't experience issues in my database related to the performance of software, hardware or network.",
-        "help_text__c": "This question relates to the main database as well as the CMS connector.",
-        "options": "AgreeValues",
-        "comment_available__c": "Yes"
-      }
-    ]
-  }
+  "pageTitle": "Questionnaires",
+  "questionnaires": [
+    {
+      "name": "UAT Evaluation",
+      "description__c": "Customer - Direct",
+      "due_date__c": "11-04-2017",
+      "status__c": "Not Started",
+      "cardtheme": "slds-theme_inverse",
+      "icontheme": "slds-icon-standard-bot",
+      "questions__c": "10",
+      "questions_mandatory__c": "8",
+      "answers__c": "6",
+      "status-theme__c" : "info"
+    },
+    {
+      "name": "Big Sky Inc Project",
+      "description__c": "Customer - Direct",
+      "due_date__c": "11-08-2017",
+      "status__c": "Not Submitted",
+      "cardtheme": "slds-theme_warning",
+      "icontheme": "slds-icon-custom-custom18",
+      "questions__c": "10",
+      "questions_mandatory__c": "8",
+      "answers__c": "6",
+      "status-theme__c" : "info"
+    },
+    {
+      "name": "Edge Communications Data Cleanse Project Evaluation",
+      "description__c": "Customer - Direct",
+      "due_date__c": "11-11-2017",
+      "status__c": "Submitted",
+      "cardtheme": "",
+      "icontheme": "slds-icon-standard-opportunity",
+      "questions__c": "10",
+      "questions_mandatory__c": "8",
+      "answers__c": "6",
+      "status-theme__c" : "success"
+    }
+  ]
+}

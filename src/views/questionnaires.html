@@ -17,120 +17,40 @@
 {% block content %}
 
 <h2 class="slds-text-align--center slds-text-heading--large slds-m-around--large">
-  {{Title}}
+  {{pageTitle}}
 </h2>
 
-{% for question in questions %}
-<div class="slds-box slds-theme_shade slds-m-around_large">
-  <div class="slds-form slds-form_stacked">
-      <fieldset class="slds-form-element">
-          <legend class="slds-form-element__legend slds-form-element__label">{{question.question__c}}</legend>
-          <div class="slds-form-element__control slds-hide_medium">
-              <div class="slds-form-element__control">
-                <span class="slds-radio">
-                  <input type="radio" id="radio-5" name="options" value="on" />
-                  <label class="slds-radio__label" for="radio-5">
-                    <span class="slds-radio_faux"></span>
-                    <span class="slds-form-element__label">Strongly Disagree</span>
-                  </label>
-                </span>
-                <span class="slds-radio">
-                  <input type="radio" id="radio-6" name="options" value="on" />
-                  <label class="slds-radio__label" for="radio-6">
-                    <span class="slds-radio_faux"></span>
-                    <span class="slds-form-element__label">Disagree</span>
-                  </label>
-                </span>
-                <span class="slds-radio">
-                    <input type="radio" id="radio-6" name="options" value="on" />
-                    <label class="slds-radio__label" for="radio-6">
-                      <span class="slds-radio_faux"></span>
-                      <span class="slds-form-element__label">No Opinion</span>
-                    </label>
-                </span>
-                <span class="slds-radio">
-                  <input type="radio" id="radio-6" name="options" value="on" />
-                  <label class="slds-radio__label" for="radio-6">
-                    <span class="slds-radio_faux"></span>
-                    <span class="slds-form-element__label">Agree</span>
-                  </label>
-                </span>
-                <span class="slds-radio">
-                  <input type="radio" id="radio-6" name="options" value="on" />
-                  <label class="slds-radio__label" for="radio-6">
-                    <span class="slds-radio_faux"></span>
-                    <span class="slds-form-element__label">Strongly Agree</span>
-                  </label>
-                </span>
-              </div>                      
-          </div>          
-          <div class="slds-form-element__control slds-show_medium">
-            <div class="slds-radio_button-group">
-              <span class="slds-button slds-radio_button">
-                <input type="radio" name="radio" id="monday1" value="on" />
-                <label class="slds-radio_button__label" for="monday1">
-                  <span class="slds-radio_faux">Strongly Disagree</span>
-                </label>
-              </span>
-              <span class="slds-button slds-radio_button">
-                <input type="radio" name="radio" id="tuesday1" value="on" />
-                <label class="slds-radio_button__label" for="tuesday1">
-                  <span class="slds-radio_faux">Disagree</span>
-                </label>
-              </span>
-              <span class="slds-button slds-radio_button">
-                <input type="radio" name="radio" id="wednesday1" value="on" />
-                <label class="slds-radio_button__label" for="wednesday1">
-                  <span class="slds-radio_faux">No Opinion</span>
-                </label>
-              </span>
-              <span class="slds-button slds-radio_button">
-                <input type="radio" name="radio" id="thursday1" value="on" />
-                <label class="slds-radio_button__label" for="thursday1">
-                  <span class="slds-radio_faux">Agree</span>
-                </label>
-              </span>
-              <span class="slds-button slds-radio_button">
-                <input type="radio" name="radio" id="friday1" value="on" />
-                <label class="slds-radio_button__label" for="friday1">
-                  <span class="slds-radio_faux">Strongly Agree</span>
-                </label>
-              </span>
-            </div>
-          </div>
-        </fieldset>
-        <div class="slds-form-element">
-            <label class="slds-form-element__label slds-assistive-text" for="input-id-01">Please add any further comments</label>
-            <div class="slds-form-element__control">
-              <input type="text" id="input-id-01" class="slds-input" placeholder="Please add any further comments" />
-            </div>
-          </div>
-        </div>
-  </div>
-</div>
-{% endfor %}                                
+{% for questionnaire in questionnaires %}
 
-
-<div class="slds-box slds-m-around_x-small">
-  <div class="slds-grid slds-wrap">
-    <div class="slds-size_5-of-6">
-      <span class="slds-checkbox">
-          <input type="checkbox" name="default" id="checkbox-1" value="on" />
-          <label class="slds-checkbox__label" for="checkbox-1">
-            <span class="slds-checkbox_faux"></span>
-            <span class="slds-form-element__label slds-m-left_large">I accept the terms of use and participation in this questionnaire</span>
-          </label>
-        </span>      
-    </div>
-    <div class="slds-size_1-of-6">
-      <div class="slds-text-align_right">
-          <button class="slds-button slds-button_brand">
-              <svg class="slds-button__icon slds-button__icon_left" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#answer" />
-              </svg>Mark Complete</button>          
+<article class="slds-card {{questionnaire.cardtheme}} slds-m-around--medium">
+  <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container" title="description of icon when needed">
+          <svg class="slds-icon slds-icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/custom-sprite/svg/symbols.svg#custom18" />
+          </svg>
+        </span>
       </div>
+      <div class="slds-media__body">
+        <h2>
+          <a href="/questionnaire.html" class="slds-card__header-link slds-truncate" title="[object Object]">
+            <span class="slds-text-heading_small">{{questionnaire.name}}</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+    <div class="slds-no-flex">
+      <button class="slds-button slds-button_neutral" onclick="window.location.href='/questionnaire.html';">Open</button>
     </div>
   </div>
-</div>
+  <div class="slds-card__body slds-card__body_inner">
+    <p>{{questionnaire.description__c}}</p>
+    <p>{{questionnaire.questions__c}} to answer</p>
+  </div>
+  <footer class="slds-card__footer">{{questionnaire.status__c}}</footer>
+</article>
+{% endfor %}
+
 
 {% endblock %}
